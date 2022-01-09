@@ -11,6 +11,7 @@ const CardBody = ({post, theme}) => {
             style={{
                 filter: theme ? 'invert(1)' : 'invert(0)',
                 color: theme ? 'white' : '#111',
+                fontSize:'20px'
             }}>
                 <span>
                     {
