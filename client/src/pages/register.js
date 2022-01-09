@@ -184,9 +184,7 @@ const Register = () => {
                             placeholder='Password'
                         />
 
-                        {/* <small onClick={() => setTypeCfPass(!typeCfPass)}>
-                            {typeCfPass ? 'Hide' : 'Show'}
-                        </small> */}
+                        
                     </div>
 
                     <small className="form-text text-danger">
