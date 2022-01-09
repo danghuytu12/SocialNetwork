@@ -6,6 +6,11 @@ import TextField from '@mui/material/TextField';
 import { IconButton, InputAdornment, OutlinedInput } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 
 const Register = () => {
     const { auth, alert } = useSelector(state => state)
@@ -82,7 +87,7 @@ const Register = () => {
                     </small>
                 </div>
 
-                <div className="form-group">
+                <div className="form-group" style={{ marginTop: '30px' }}>
                     {/* <label htmlFor="username">User Name</label>
                     <input type="text" className="form-control" id="username" name="username"
                     onChange={handleChangeInput} value={username.toLowerCase().replace(/ /g, '')}
@@ -97,7 +102,7 @@ const Register = () => {
                     </small>
                 </div>
 
-                <div className="form-group">
+                <div className="form-group" style={{ marginTop: '30px' }}>
                     {/* <label htmlFor="exampleInputEmail1">Email address</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" name="email"
                         onChange={handleChangeInput} value={email}
@@ -111,7 +116,7 @@ const Register = () => {
                     </small>
                 </div>
 
-                <div className="form-group">
+                <div className="form-group" style={{ marginTop: '30px' }}>
                     {/* <label htmlFor="exampleInputPassword1">Password</label> */}
 
                     <div className="pass">
@@ -180,11 +185,11 @@ const Register = () => {
                                     </IconButton>
                                 </InputAdornment>
                             }
-                            label="Password"
-                            placeholder='Password'
+                            label="Confirm Password"
+                            placeholder='Confirm Password'
                         />
 
-                        
+
                     </div>
 
                     <small className="form-text text-danger">
@@ -193,20 +198,30 @@ const Register = () => {
                 </div>
 
                 <div className="row justify-content-between mx-0 mb-1">
-                    <label htmlFor="male">
+                    {/* <label htmlFor="male">
                         Male: <input type="radio" id="male" name="gender"
                             value="male" defaultChecked onChange={handleChangeInput} />
-                    </label>
+                    </label> */}
 
-                    <label htmlFor="female">
+                    {/* <label htmlFor="female">
                         Female: <input type="radio" id="female" name="gender"
                             value="female" onChange={handleChangeInput} />
-                    </label>
+                    </label> */}
 
-                    <label htmlFor="other">
+
+                    {/* <label htmlFor="other">
                         Other: <input type="radio" id="other" name="gender"
                             value="other" onChange={handleChangeInput} />
-                    </label>
+                    </label> */}
+
+                    <RadioGroup row aria-label="gender" name="row-radio-buttons-group" style={{marginLeft:50}}>
+                        <FormControlLabel id="male" name="gender"
+                            value="male" defaultChecked onChange={handleChangeInput} control={<Radio />} label="Female" />
+                        <FormControlLabel id="female" name="gender"
+                            value="female" onChange={handleChangeInput} control={<Radio />} label="Male" />
+                        <FormControlLabel id="other" name="gender"
+                            value="other" onChange={handleChangeInput} control={<Radio />} label="Other" />
+                    </RadioGroup>
                 </div>
 
                 <button type="submit" className="btn btn-dark w-100">
