@@ -118,7 +118,6 @@ const LeftSide = () => {
                                             ) && <i className="fas fa-circle" />
                                                 
                                         }
-                                        
                                     </UserCard>
                                 </div>
                             ))
