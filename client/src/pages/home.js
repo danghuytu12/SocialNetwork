@@ -76,7 +76,7 @@ const Home = () => {
         // </div>
         <Grid xs={12} container style={{ display: 'flex', justifyContent: 'center', marginTop: "10px" }}>
             <Grid xs={5} style={{ marginLeft: "20px" }}>
-            <Status />
+            {/* <Status /> */}
                 <Card 
                 // sx={{ maxWidth: 800 ,maxHeight:600}}
                 >
