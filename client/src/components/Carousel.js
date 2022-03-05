@@ -26,11 +26,11 @@ const Carousel = ({images, id}) => {
                         <div key={index} className={`carousel-item ${isActive(index)}`}>
                             {
                                 img.url.match(/video/i)
-                                ? <video controls src={img.url} className="d-block w-100" alt={img.url}
+                                ? <video controls src={img.url} className="d-block w-100 h-100" alt={img.url}
                                 style={{filter: theme ? 'invert(1)' : 'invert(0)'}} />
 
-                                : <img src={img.url} className="d-block w-100" alt={img.url}
-                                style={{filter: theme ? 'invert(1)' : 'invert(0)'}} />
+                                : <img src={img.url} className="d-block w-100 " alt={img.url}
+                                style={{filter: theme ? 'invert(1)' : 'invert(0)',height:"550px"}} />
                             }
                            
                         </div>

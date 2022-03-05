@@ -50,8 +50,8 @@ const CardHeader = ({post}) => {
                     more_horiz
                 </span>
 
-                <div className="dropdown-menu">
-                    {
+                <div className="dropdown-menu" style={{marginLeft:"-100px"}}>
+                    {/* {
                         auth.user._id === post.user._id &&
                         <>
                             <div className="dropdown-item" onClick={handleEditPost}>
@@ -61,7 +61,7 @@ const CardHeader = ({post}) => {
                                 <span className="material-icons">delete_outline</span> Remove Post
                             </div>
                         </>
-                    }
+                    } */}
 
                     <div className="dropdown-item" onClick={handleCopyLink}>
                         <span className="material-icons">content_copy</span> Copy Link
