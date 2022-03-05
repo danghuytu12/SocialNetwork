@@ -8,7 +8,6 @@ import LoadIcon from '../../images/loading.gif'
 const Search = () => {
     const [search, setSearch] = useState('')
     const [users, setUsers] = useState([])
-
     const { auth } = useSelector(state => state)
     const dispatch = useDispatch()
     const [load, setLoad] = useState(false)
@@ -36,7 +35,7 @@ const Search = () => {
     }
 
     return (
-        <form className="search_form" onSubmit={handleSearch} style={{ marginTop: "15px" }}>
+        <form className="search_form" onSubmit={handleSearch} style={{ marginTop: "15px",widthL:268 }}>
             {/* <input type="text" name="search" value={search} id="search" title="Enter to Search"
             onChange={e => setSearch(e.target.value.toLowerCase().replace(/ /g, ''))} />
 
@@ -48,9 +47,9 @@ const Search = () => {
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <button id="button-addon2" type="submit" class="btn btn-link text-warning"><i class="fa fa-search"></i></button>
-                        <input name="search" value={search} id="search" onChange={e => setSearch(e.target.value.toLowerCase().replace(/ /g, ''))} type="search" placeholder="What're you searching for?" aria-describedby="button-addon2" class="form-control border-0 bg-light" />
+                        <input name="search" value={search} id="search" onChange={e => setSearch(e.target.value.toLowerCase().replace(/ /g, ''))} type="text" placeholder="Tìm kiếm" aria-describedby="button-addon2" class="form-control border-0 bg-light" />
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -80,6 +79,7 @@ const Search = () => {
                 }
             </div>
         </form>
+
 
 
     )

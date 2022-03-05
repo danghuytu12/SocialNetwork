@@ -24,7 +24,7 @@ const Header = () => {
         //     </nav>
         // </div>
         <Grid xs={12} className="header bg-light" container style={{ minHeight: "60px", padding: "0px 150px", justifyContent: 'center', alignItems: "center" }}>
-            <Grid xs={2}>
+            <Grid xs={4}>
                 <Link to="/" className="logo">
                     {/* <h1 className="navbar-brand text-uppercase p-0 m-0"
                         onClick={() => window.scrollTo({ top: 0 })}>
@@ -36,7 +36,7 @@ const Header = () => {
             <Grid xs={3}>
                 <Search />
             </Grid>
-            <Grid xs={5} style={{marginLeft:'70px'}}>
+            <Grid xs={5} style={{display:'flex',justifyContent:"center"}}>
                 <Menu />
             </Grid>
         </Grid>
