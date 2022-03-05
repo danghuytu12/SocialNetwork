@@ -32,13 +32,13 @@ const Home = () => {
         //     <div className="col-md-8">
         //         <Status />
 
-        //         {
-        //             homePosts.loading 
-        //             ? <img src={LoadIcon} alt="loading" className="d-block mx-auto" />
-        //             : (homePosts.result === 0 && homePosts.posts.length === 0)
-        //                 ? <h2 className="text-center">No Post</h2>
-        //                 : <Posts />
-        //         }
+                // {
+                //     homePosts.loading 
+                //     ? <img src={LoadIcon} alt="loading" className="d-block mx-auto" />
+                //     : (homePosts.result === 0 && homePosts.posts.length === 0)
+                //         ? <h2 className="text-center">No Post</h2>
+                //         : <Posts />
+                // }
 
         //     </div>
 
@@ -46,12 +46,18 @@ const Home = () => {
         //         <RightSideBar />
         //     </div>
         // </div>
-        <Grid xs={12} container>
-            <Grid xs={6} style={{marginLeft:"20px"}}>
-a
+        <Grid xs={12} container style={{display:'flex',justifyContent:'center',marginTop:"10px"}}>
+            <Grid xs={5} style={{marginLeft:"20px"}}>
+            {
+                    homePosts.loading 
+                    ? <img src={LoadIcon} alt="loading" className="d-block mx-auto" />
+                    : (homePosts.result === 0 && homePosts.posts.length === 0)
+                        ? <h2 className="text-center">No Post</h2>
+                        : <Posts />
+                }
             </Grid>
-            <Grid xs={4}>
-b
+            <Grid xs={3} style={{marginLeft:'30px'}}>
+<RightSideBar />    
             </Grid>
         </Grid>
     )
