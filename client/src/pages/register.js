@@ -71,7 +71,7 @@ const Register = () => {
     return (
         <div className="auth_page">
             <form onSubmit={handleSubmit}>
-                <h3 className="text-uppercase text-center mb-4">TU-Network</h3>
+                <h3 className="text-uppercase text-center mb-4">Instagram</h3>
 
                 <div className="form-group">
                     {/* <label htmlFor="fullname">Full Name</label> */}
