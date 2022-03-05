@@ -74,7 +74,7 @@ const Home = () => {
         //         <RightSideBar />
         //     </div>
         // </div>
-        <Grid xs={12} container style={{ display: 'flex', justifyContent: 'center', marginTop: "10px" }}>
+        <Grid xs={12} container style={{ display: 'flex', justifyContent: 'center', marginTop: "20px" }}>
             <Grid xs={5} style={{ marginLeft: "20px" }}>
             {/* <Status /> */}
                 <Card 

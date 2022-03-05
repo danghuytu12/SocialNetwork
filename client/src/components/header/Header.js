@@ -23,7 +23,7 @@ const Header = () => {
         //         <Menu />
         //     </nav>
         // </div>
-        <Grid xs={12} className="header bg-light" container style={{ minHeight: "60px", padding: "0px 150px", justifyContent: 'center', alignItems: "center" }}>
+        <Grid xs={12} className="header bg-light" container style={{ height: "60px", padding: "0px 150px", justifyContent: 'center', alignItems: "center" }}>
             <Grid xs={4}>
                 <Link to="/" className="logo">
                     {/* <h1 className="navbar-brand text-uppercase p-0 m-0"
@@ -33,7 +33,7 @@ const Header = () => {
                     <img src={a} />
                 </Link>
             </Grid>
-            <Grid xs={3}>
+            <Grid xs={3} style={{height:"60px",display:"flex",alignItems:'center'}}>
                 <Search />
             </Grid>
             <Grid xs={5} style={{display:'flex',justifyContent:"center"}}>
