@@ -49,6 +49,7 @@
 /* ---------- Header Search -------- */
 .header .search_form{
     position: relative;
+    margin-top: 15px;
 }
 .header .search_form #search{
     background: #fafafa;

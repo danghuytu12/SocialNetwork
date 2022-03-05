@@ -16,7 +16,7 @@ const Search = () => {
 
     const handleSearch = async (e) => {
         e.preventDefault()
-        if(!search) return;
+        if (!search) return;
 
         try {
             setLoad(true)
@@ -25,7 +25,7 @@ const Search = () => {
             setLoad(false)
         } catch (err) {
             dispatch({
-                type: GLOBALTYPES.ALERT, payload: {error: err.response.data.msg}
+                type: GLOBALTYPES.ALERT, payload: { error: err.response.data.msg }
             })
         }
     }
@@ -36,37 +36,52 @@ const Search = () => {
     }
 
     return (
-        <form className="search_form" onSubmit={handleSearch}>
-            <input type="text" name="search" value={search} id="search" title="Enter to Search"
+        <form className="search_form" onSubmit={handleSearch} style={{ marginTop: "15px" }}>
+            {/* <input type="text" name="search" value={search} id="search" title="Enter to Search"
             onChange={e => setSearch(e.target.value.toLowerCase().replace(/ /g, ''))} />
 
             <div className="search_icon" style={{opacity: search ? 0 : 0.3}}>
                 <span className="material-icons">search</span>
                 <span>Enter to Search</span>
+            </div> */}
+            <div class=" bg-light rounded rounded-pill shadow-sm mb-4">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <button id="button-addon2" type="submit" class="btn btn-link text-warning"><i class="fa fa-search"></i></button>
+                        <input name="search" value={search} id="search" onChange={e => setSearch(e.target.value.toLowerCase().replace(/ /g, ''))} type="search" placeholder="What're you searching for?" aria-describedby="button-addon2" class="form-control border-0 bg-light" />
+                    </div>
+                    
+                </div>
             </div>
 
-            <div className="close_search" onClick={handleClose}
-            style={{opacity: users.length === 0 ? 0 : 1}} >
-                &times;
-            </div>
+            {/* <button type="submit" style={{display: 'none'}}>Search</button> */}
 
-            <button type="submit" style={{display: 'none'}}>Search</button>
+            {load && <img className="loading" src={LoadIcon} alt="loading" />}
 
-            { load && <img className="loading" src={LoadIcon} alt="loading"  /> }
-
-            <div className="users">
+            <div className="users"
+                style={{
+                    position: "absolute",
+                    width: "100%",
+                    minWidth: 250,
+                    background: "#fafafa",
+                    maxHeight: "calc(100vh - 150px)",
+                    overflow: "auto",
+                    marginTop: 3,
+                }}>
                 {
                     search && users.map(user => (
-                        <UserCard 
-                        key={user._id} 
-                        user={user} 
-                        border="border"
-                        handleClose={handleClose} 
+                        <UserCard
+                            key={user._id}
+                            user={user}
+                            border="border"
+                            handleClose={handleClose}
                         />
                     ))
                 }
             </div>
         </form>
+
+
     )
 }
 

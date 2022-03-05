@@ -96,6 +96,7 @@ img {
   
   .header .search_form{
       width: 100%;
+      margin-top: 15px;
   }
   .header .logo{
       margin: auto;

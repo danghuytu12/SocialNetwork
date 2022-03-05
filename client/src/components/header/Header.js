@@ -23,8 +23,8 @@ const Header = () => {
         //         <Menu />
         //     </nav>
         // </div>
-        <Grid xs={12} container style={{ minHeight: "60px", padding: "0px 150px", display: "flex", justifyContent: 'center',alignItems:"center" }}>
-            <Grid xs={3}>
+        <Grid xs={12} className="header bg-light" container style={{ minHeight: "60px", padding: "0px 150px", justifyContent: 'center', alignItems: "center" }}>
+            <Grid xs={2}>
                 <Link to="/" className="logo">
                     {/* <h1 className="navbar-brand text-uppercase p-0 m-0"
                         onClick={() => window.scrollTo({ top: 0 })}>
@@ -34,10 +34,10 @@ const Header = () => {
                 </Link>
             </Grid>
             <Grid xs={3}>
-                b
+                <Search />
             </Grid>
-            <Grid xs={3}>
-                c
+            <Grid xs={5} style={{marginLeft:'70px'}}>
+                <Menu />
             </Grid>
         </Grid>
     )
