@@ -134,7 +134,7 @@ const Register = () => {
                             fullWidth
                             id="outlined-adornment-password"
                             type={values.showPassword ? 'text' : 'password'}
-                            id="exampleInputPassword1"
+                            // id="exampleInputPassword1"
                             onChange={handleChangeInput} value={password} name="password"
                             endAdornment={
                                 <InputAdornment position="end">
@@ -171,7 +171,7 @@ const Register = () => {
                             fullWidth
                             id="outlined-adornment-password"
                             type={valuess.cf_showPassword ? 'text' : 'password'}
-                            id="exampleInputPassword1"
+                            // id="exampleInputPassword1"
                             onChange={handleChangeInput} value={cf_password} name="cf_password"
                             endAdornment={
                                 <InputAdornment position="end">
