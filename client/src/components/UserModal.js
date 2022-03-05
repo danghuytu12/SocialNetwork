@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { Typography } from '@mui/material';
-const UserCard = ({ children, user, border, handleClose, setShowFollowers, setShowFollowing, msg }) => {
+const UserModal = ({ children, user, border, handleClose, setShowFollowers, setShowFollowing, msg }) => {
 
     const { theme } = useSelector(state => state)
 
@@ -44,7 +44,7 @@ const UserCard = ({ children, user, border, handleClose, setShowFollowers, setSh
 
 
     return (
-        <div className={`d-flex p-2 align-items-center justify-content-between w-100 ${border}`}>
+        <div className={`d-flex align-items-center justify-content-between w-100 ${border}`} style={{padding:0}}>
             <div>
                 <Link to={`/profile/${user._id}`} onClick={handleCloseAll}
                     className="d-flex align-items-center">
@@ -53,13 +53,13 @@ const UserCard = ({ children, user, border, handleClose, setShowFollowers, setSh
 
 
                     <div className="ml-1" style={{ transform: 'translateY(-2px)' }}>
-                        <span className="d-block" style={{ fontSize: "20px", color: "black", fontWeight: "500", marginLeft: "10px" }}>{user.username}</span>
+                        <span className="d-block" style={{ fontSize: "20px", color: "black", fontWeight: "500", marginLeft: "10px" ,marginTop:"20px"}}>{user.username}</span>
 
                         <span style={{ opacity: 0.7, fontSize: "20px", color: "black", marginLeft: "10px" }}>
                             {
                                 msg
                                     ? showMsg(user)
-                                    : user.fullname
+                                    : ""
                             }
                         </span>
                     </div>
@@ -72,4 +72,4 @@ const UserCard = ({ children, user, border, handleClose, setShowFollowers, setSh
     )
 }
 
-export default UserCard
+export default UserModal

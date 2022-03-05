@@ -81,6 +81,7 @@ function App() {
           {call && <CallModal />}
           
           <Route exact path="/" component={auth.token ? Home : Login} />
+          <Route exact path="/login" component={ Login} />
           <Route exact path="/register" component={Register} />
 
           <PrivateRouter exact path="/:page" component={PageRender} />

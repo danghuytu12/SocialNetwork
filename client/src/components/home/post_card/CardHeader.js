@@ -38,7 +38,7 @@ const CardHeader = ({ post }) => {
             <div className="d-flex">
                 {/* <Avatar src={post.user.avatar} size="big-avatar" /> */}
                 <Stack direction="row" spacing={2}>
-                    <Avatar src={post.user.avatar} />
+                    <Avatar  src={post.user.avatar} />
                 </Stack>
                 <div className="card_name">
                     <Link to={`/profile/${post.user._id}`} className="text-dark" style={{ marginLeft: "10px", fontSize: "22px" }}>
