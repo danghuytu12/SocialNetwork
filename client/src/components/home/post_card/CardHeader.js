@@ -32,6 +32,7 @@ const CardHeader = ({ post }) => {
     const handleCopyLink = () => {
         navigator.clipboard.writeText(`${BASE_URL}/post/${post._id}`)
     }
+    console.log("aaaaa",post)
 
     return (
         <div className="card_header">
@@ -59,7 +60,7 @@ const CardHeader = ({ post }) => {
             </div>
 
             <div className="nav-item dropdown">
-                <span className="material-icons" id="moreLink" data-toggle="dropdown">
+                <span className="material-icons" id="moreLink" data-toggle="dropdown" style={{cursor:"pointer"}}>
                     more_horiz
                 </span>
 

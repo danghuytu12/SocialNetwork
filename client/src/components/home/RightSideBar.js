@@ -65,12 +65,13 @@ const RightSideBar = ({ post }) => {
             </div>
 
             <div className="d-flex justify-content-between align-items-center my-2">
-                <h5 className="text-danger">Suggestions for you</h5>
-                {
+                <span style={{color:"#8e8e8e",fontSize:"14px",marginLeft:"15px"}}>Gợi ý cho bạn</span>
+                {/* {
                     !suggestions.loading &&
                     <i className="fas fa-redo" style={{ cursor: 'pointer', marginRight: "40px" }}
                         onClick={() => dispatch(getSuggestions(auth.token))} />
-                }
+                } */}
+                <span style={{color:"#262626",fontSize:"12px",marginRight:"20px",cursor:"pointer"}}>Xem tất cả</span>
             </div>
 
             {
