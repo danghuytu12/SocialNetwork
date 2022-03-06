@@ -53,9 +53,9 @@ const UserCard = ({ children, user, border, handleClose, setShowFollowers, setSh
 
 
                     <div className="ml-1" style={{ transform: 'translateY(-2px)' }}>
-                        <span className="d-block" style={{ fontSize: "20px", color: "black", fontWeight: "500", marginLeft: "10px" }}>{user.username}</span>
+                        <span className="d-block" style={{ fontSize: "14px", color: "black", fontWeight: "500", marginLeft: "10px" }}>{user.username}</span>
 
-                        <span style={{ opacity: 0.7, fontSize: "20px", color: "black", marginLeft: "10px" }}>
+                        <span style={{ opacity: 0.7, fontSize: "14px", color: "black", marginLeft: "10px" }}>
                             {
                                 msg
                                     ? showMsg(user)

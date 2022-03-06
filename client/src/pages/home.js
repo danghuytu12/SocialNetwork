@@ -117,7 +117,7 @@ const Home = () => {
 
                 </Card>
             </Grid>
-            <Grid xs={3} style={{ marginLeft: '30px' }}>
+            <Grid xs={3} style={{ marginLeft: '30px',paddingRight:"30px" }}>
                 <RightSideBar />
             </Grid>
         </Grid>

@@ -28,18 +28,18 @@ const style = {
 const RightSideBar = ({ post }) => {
     console.log("post", post)
     const { auth, suggestions } = useSelector(state => state)
+    console.log("saaaaa", suggestions)
+    console.log("a", auth)
     const dispatch = useDispatch()
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const [openLogin, setOpenLogin] = React.useState(false);
-    const handleOpenLogin = () => setOpenLogin(true);
-    const handleCloseLogin = () => setOpenLogin(false);
     return (
         <div className="mt-3">
             <div style={{ display: "flex", alignItems: 'center' }}>
                 <UserCard user={auth.user} />
-                <span onClick={handleOpen} style={{ color: "#0095f6", alignItems: "center", fontSize: "12px", cursor: "pointer" }}>Chuyển</span>
+
+                <span onClick={handleOpen} style={{ color: "#0095f6", alignItems: "center", fontSize: "12px", cursor: "pointer", marginRight: "30px" }}>Chuyển</span>
                 <Modal
                     open={open}
                     onClose={handleClose}
@@ -63,12 +63,12 @@ const RightSideBar = ({ post }) => {
                     </Box>
                 </Modal>
             </div>
-        
+
             <div className="d-flex justify-content-between align-items-center my-2">
                 <h5 className="text-danger">Suggestions for you</h5>
                 {
                     !suggestions.loading &&
-                    <i className="fas fa-redo" style={{ cursor: 'pointer' }}
+                    <i className="fas fa-redo" style={{ cursor: 'pointer', marginRight: "40px" }}
                         onClick={() => dispatch(getSuggestions(auth.token))} />
                 }
             </div>

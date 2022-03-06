@@ -39,14 +39,17 @@ const FollowBtn = ({user}) => {
         <>
         {
             followed
-            ? <button className="btn btn-outline-danger"
+            ? <span style={{marginRight:"20px",fontSize:"12px",color: 'red',cursor:"pointer"}}
+            //  className="btn btn-outline-danger"
+
             onClick={handleUnFollow}>
                 UnFollow
-            </button>
-            : <button className="btn btn-outline-info"
+            </span>
+            : <span style={{marginRight:"20px",fontSize:"12px",color: '#0095f6',cursor:"pointer"}}
+            // className="btn btn-outline-info"
             onClick={handleFollow}>
                 Follow
-            </button>
+            </span>
         }
         </>
     )
