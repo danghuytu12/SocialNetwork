@@ -77,7 +77,6 @@ const CardHeader = ({ post }) => {
                         </>
                     }
 
-
                     <div className="dropdown-item" onClick={handleCopyLink}>
                         <span className="material-icons">content_copy</span> Copy Link
                     </div>
