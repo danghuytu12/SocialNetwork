@@ -26,10 +26,8 @@ const style = {
     padding: "0px 0px 10px 0px",
 };
 const RightSideBar = ({ post }) => {
-    console.log("post", post)
     const { auth, suggestions } = useSelector(state => state)
-    console.log("saaaaa", suggestions)
-    console.log("a", auth)
+
     const dispatch = useDispatch()
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);

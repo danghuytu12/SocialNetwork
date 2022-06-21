@@ -140,14 +140,14 @@ const StatusModal = () => {
                                         : img.url
                                             ?<>
                                                 {
-                                                    img.url.match(/video/i)
+                                                    img.url?.match(/video/i)
                                                     ? videoShow(img.url, theme) 
                                                     : imageShow(img.url, theme)
                                                 }
                                             </>
                                             :<>
                                                 {
-                                                    img.type.match(/video/i)
+                                                    img.type?.match(/video/i)
                                                     ? videoShow(URL.createObjectURL(img), theme) 
                                                     : imageShow(URL.createObjectURL(img), theme)
                                                 }

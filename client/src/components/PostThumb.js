@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 const PostThumb = ({posts, result}) => {
+    console.log('posts',posts)
     const { theme } = useSelector(state => state)
 
     if(result === 0) return <h2 className="text-center text-danger">No Post</h2>
@@ -15,7 +16,7 @@ const PostThumb = ({posts, result}) => {
                         <div className="post_thumb_display">
 
                             {
-                                post.images[0].url.match(/video/i)
+                                post.images[0].url?.match(/video/i)
                                 ?<video controls src={post.images[0].url} alt={post.images[0].url}
                                 style={{filter: theme ? 'invert(1)' : 'invert(0)'}} />
 

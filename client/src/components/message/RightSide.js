@@ -42,7 +42,7 @@ const RightSide = () => {
     useEffect(() => {
         if(id && message.users.length > 0){
             setTimeout(() => {
-                refDisplay.current.scrollIntoView({behavior: 'smooth', block: 'end'})
+                refDisplay.current?.scrollIntoView({behavior: 'smooth', block: 'end'})
             },50)
 
             const newUser = message.users.find(user => user._id === id)
@@ -96,7 +96,7 @@ const RightSide = () => {
         setLoadMedia(false)
         await dispatch(addMessage({msg, auth, socket}))
         if(refDisplay.current){
-            refDisplay.current.scrollIntoView({behavior: 'smooth', block: 'end'})
+            refDisplay.current?.scrollIntoView({behavior: 'smooth', block: 'end'})
         }
     }
 
@@ -105,7 +105,7 @@ const RightSide = () => {
             if(message.data.every(item => item._id !== id)){
                 await dispatch(getMessages({auth, id}))
                 setTimeout(() => {
-                    refDisplay.current.scrollIntoView({behavior: 'smooth', block: 'end'})
+                    refDisplay.current?.scrollIntoView({behavior: 'smooth', block: 'end'})
                 },50)
             }
         }
@@ -242,7 +242,7 @@ const RightSide = () => {
                     media.map((item, index) => (
                         <div key={index} id="file_media">
                             {
-                                item.type.match(/video/i)
+                                item.type?.match(/video/i)
                                 ? videoShow(URL.createObjectURL(item), theme)
                                 : imageShow(URL.createObjectURL(item), theme)
                             }

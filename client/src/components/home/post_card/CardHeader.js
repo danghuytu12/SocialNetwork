@@ -32,7 +32,6 @@ const CardHeader = ({ post }) => {
     const handleCopyLink = () => {
         navigator.clipboard.writeText(`${BASE_URL}/post/${post._id}`)
     }
-    console.log("aaaaa",post)
 
     return (
         <div className="card_header">
